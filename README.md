@@ -10,8 +10,8 @@
 [npm]:             https://www.npmjs.com/package/@tadashi/hash
 [ci-img]:          https://github.com/lagden/hash/workflows/Node.js%20CI/badge.svg
 [ci]:              https://github.com/lagden/hash/actions?query=workflow%3A%22Node.js+CI%22
-[coveralls-img]:   https://coveralls.io/repos/github/lagden/hash/badge.svg?branch=master
-[coveralls]:       https://coveralls.io/github/lagden/hash?branch=master
+[coveralls-img]:   https://coveralls.io/repos/github/lagden/hash/badge.svg?branch=main
+[coveralls]:       https://coveralls.io/github/lagden/hash?branch=main
 [xo-img]:          https://img.shields.io/badge/code_style-XO-5ed9c7.svg
 [xo]:              https://github.com/sindresorhus/xo
 
