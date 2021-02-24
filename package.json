@@ -1,0 +1,59 @@
+{
+  "name": "@tadashi/hash",
+  "version": "1.0.0",
+  "description": "Create a hash from any value",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "pretest": "xo",
+    "test": "ava -t",
+    "precoverage": "npm run pretest",
+    "coverage": "nyc --reporter=text-summary --reporter=lcov ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lagden/hash.git"
+  },
+  "keywords": [
+    "key",
+    "value",
+    "hash",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "Thiago Lagden",
+  "license": "MIT",
+  "homepage": "https://github.com/lagden/hash#readme",
+  "bugs": {
+    "url": "https://github.com/lagden/hash/issues"
+  },
+  "xo": {
+    "envs": [
+      "node"
+    ],
+    "semicolon": false,
+    "rules": {
+      "camelcase": [
+        "error",
+        {
+          "properties": "never"
+        }
+      ],
+      "capitalized-comments": 0,
+      "unicorn/prevent-abbreviations": 0
+    }
+  },
+  "dependencies": {
+    "devalue": "2.0.1"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "nyc": "15.1.0",
+    "xo": "0.38.1"
+  }
+}
