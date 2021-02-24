@@ -28,7 +28,7 @@ $ npm i -S @tadashi/hash
 
 ## API
 
-#### spritetify(value: any): string
+#### hash(value: any): string
 
 parameter   | type     | required    | default     | description
 --------    | -------- | ----------- | ----------- | ------------
