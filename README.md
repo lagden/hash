@@ -36,8 +36,8 @@ $ yarn add -E @tadashi/hash
 
 ### hash(value[, options])
 
-> Type: <string> | <Buffer> | <TypedArray> | <DataView>
-> Return: <Buffer> | <string>
+> Type: \<string> | \<Buffer> | \<TypedArray> | \<DataView>  
+> Return: \<Buffer> | \<string>
 
 parameter | type      | required    | default     | description
 --------  | --------  | ----------- | ----------- | ------------
