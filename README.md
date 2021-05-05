@@ -16,7 +16,7 @@
 [xo]:              https://github.com/sindresorhus/xo
 
 
-Create a hash from any value
+Create a hash from any value.
 
 
 ## Install
@@ -41,22 +41,22 @@ $ yarn add -E @tadashi/hash
 
 #### value
 
-> Type: string | Buffer | TypedArray | DataView  
 > Description: data for generate hash  
+> Type: string | Buffer | TypedArray | DataView  
 > Default: - 
 
 
 #### options
 
-> Type: Object  
 > Description: hash options  
+> Type: Object  
 > Default: see below
 
 
 parameter | type      | required    | default     | description
 --------  | --------  | ----------- | ----------- | ------------
 alg       | string    | no          | sha1        | algorithm
-encoding  | string    | no          | hex         | encoding of the return value.
+encoding  | string    | no          | hex         | encoding of the return value
 
 
 ## Usage
