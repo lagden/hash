@@ -1,38 +1,45 @@
 {
   "name": "@tadashi/hash",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Create a hash from any value",
-  "main": "index.js",
-  "files": [
-    "LICENSE",
-    "README.md"
-  ],
-  "scripts": {
-    "pretest": "xo",
-    "test": "ava -t",
-    "precoverage": "npm run pretest",
-    "coverage": "nyc --reporter=text-summary --reporter=lcov ava"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/lagden/hash.git"
-  },
   "keywords": [
     "key",
     "value",
     "hash",
     "lib"
   ],
-  "engines": {
-    "node": ">=12"
-  },
   "author": "Thiago Lagden",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lagden/hash.git"
+  },
   "homepage": "https://github.com/lagden/hash#readme",
   "bugs": {
     "url": "https://github.com/lagden/hash/issues"
   },
+  "main": "src/hash.js",
+  "type": "module",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "pretest": "xo",
+    "test": "c8 --reporter=text --reporter=lcov ava"
+  },
+  "devDependencies": {
+    "ava": "3.15.0",
+    "c8": "7.7.2",
+    "xo": "0.39.1"
+  },
   "xo": {
+    "ignores": [
+      "bin/**/*.js"
+    ],
     "envs": [
       "node"
     ],
@@ -45,15 +52,8 @@
         }
       ],
       "capitalized-comments": 0,
-      "unicorn/prevent-abbreviations": 0
+      "unicorn/prevent-abbreviations": 0,
+      "promise/prefer-await-to-then": 0
     }
-  },
-  "dependencies": {
-    "devalue": "2.0.1"
-  },
-  "devDependencies": {
-    "ava": "3.15.0",
-    "nyc": "15.1.0",
-    "xo": "0.38.1"
   }
 }

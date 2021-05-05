@@ -25,25 +25,41 @@ Create a hash from any value
 $ npm i -S @tadashi/hash
 ```
 
+or
+
+```
+$ yarn add -E @tadashi/hash
+```
+
 
 ## API
 
-#### hash(value: any): string
+### hash(value[, options])
 
-parameter   | type     | required    | default     | description
---------    | -------- | ----------- | ----------- | ------------
-value       | any      | yes         | -           | content that will be transformed in hash
+> Type: <string> | <Buffer> | <TypedArray> | <DataView>
+> Return: <Buffer> | <string>
+
+parameter | type      | required    | default     | description
+--------  | --------  | ----------- | ----------- | ------------
+value     | see above | yes         | -           | data for generate hash
+options   | object    | no          | see below   | hash options
+
+
+#### options
+
+parameter | type      | required    | default     | description
+--------  | --------  | ----------- | ----------- | ------------
+alg       | string    | no          | sha1        | algorithm
+encoding  | string    | no          | hex         | encoding of the return value.
 
 
 ## Usage
 
 ```js
-'use strict'
+import hash from '@tadashi/hash'
 
-const hash = require('@tadashi/hash')
-
-const hex = hash('test')
-// => 5006d6f8302000e8b87fef5c50c071d6d97b4e88
+const data = hash('test')
+// => a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
 ```
 
 
