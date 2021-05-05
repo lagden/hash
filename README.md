@@ -36,16 +36,22 @@ $ yarn add -E @tadashi/hash
 
 ### hash(value[, options])
 
-> Type: \<string> | \<Buffer> | \<TypedArray> | \<DataView>  
-> Return: \<Buffer> | \<string>
+> Return: Buffer | string
 
-parameter | type      | required    | default     | description
---------  | --------  | ----------- | ----------- | ------------
-value     | see above | yes         | -           | data for generate hash
-options   | object    | no          | see below   | hash options
+
+#### value
+
+> Type: string | Buffer | TypedArray | DataView  
+> Description: data for generate hash  
+> Default: - 
 
 
 #### options
+
+> Type: Object  
+> Description: hash options  
+> Default: see below
+
 
 parameter | type      | required    | default     | description
 --------  | --------  | ----------- | ----------- | ------------
