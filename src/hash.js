@@ -1,14 +1,12 @@
-'use strict'
-
-import crypto from 'node:crypto'
+import {createHash} from 'node:crypto'
 
 function hash(value, options = {}) {
 	const {
 		alg = 'sha1',
 		encoding = 'hex',
-		asBuffer = false
+		asBuffer = false,
 	} = options
-	const hash = crypto.createHash(alg)
+	const hash = createHash(alg)
 	hash.update(value)
 	return hash.digest(asBuffer ? undefined : encoding)
 }

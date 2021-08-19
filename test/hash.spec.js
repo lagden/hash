@@ -1,5 +1,3 @@
-'use strict'
-
 import test from 'ava'
 import hash from '../src/hash.js'
 
@@ -11,14 +9,14 @@ test('hash', t => {
 test('hash options', t => {
 	const data = hash('test', {
 		alg: 'sha256',
-		encoding: 'base64'
+		encoding: 'base64',
 	})
 	t.snapshot(data)
 })
 
 test('hash buffer', t => {
 	const data = hash('test', {
-		asBuffer: true
+		asBuffer: true,
 	})
 	t.snapshot(data)
 })
