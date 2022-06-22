@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/hash",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Create a hash from any value",
   "keywords": [
     "key",
@@ -18,7 +18,8 @@
   "bugs": {
     "url": "https://github.com/lagden/hash/issues"
   },
-  "main": "src/hash.js",
+  "browser": "src/browser.js",
+  "main": "src/node.js",
   "type": "module",
   "files": [
     "LICENSE",
@@ -33,19 +34,14 @@
     "test": "c8 --reporter=text --reporter=text-summary --reporter=lcov ava --tap"
   },
   "devDependencies": {
-    "@babel/core": "7.15.0",
-    "@babel/eslint-parser": "7.15.0",
-    "ava": "3.15.0",
-    "c8": "7.8.0",
-    "eslint": "7.32.0",
-    "eslint-config-xo": "0.38.0",
-    "eslint-plugin-unicorn": "35.0.0",
-    "winston": "3.3.3"
+    "@babel/core": "7.18.5",
+    "@babel/eslint-parser": "7.18.2",
+    "ava": "4.3.0",
+    "c8": "7.11.3",
+    "eslint": "8.18.0",
+    "eslint-config-xo": "0.41.0",
+    "eslint-plugin-unicorn": "42.0.0"
   },
   "babel": {},
-  "ava": {
-    "nodeArguments": [
-      "--trace-warnings"
-    ]
-  }
+  "packageManager": "yarn@3.2.1"
 }

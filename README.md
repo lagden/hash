@@ -55,16 +55,32 @@ $ yarn add -E @tadashi/hash
 
 parameter | type      | required    | default     | description
 --------  | --------  | ----------- | ----------- | ------------
-alg       | string    | no          | sha1        | algorithm
-encoding  | string    | no          | hex         | encoding of the return value
-
+alg       | string    | no          | sha256      | algorithm
+encoding  | string    | no          | hex         | convert a digest
+asBuffer  | boolean   | no          | false       | return hash as buffer
 
 ## Usage
+
+Via Node
 
 ```js
 import hash from '@tadashi/hash'
 
 const data = hash('test')
+// => a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+```
+
+Via Browser
+
+⚠️ **Warning**
+
+This feature is available only in secure contexts (HTTPS), in some or all supporting browsers.
+
+```js
+import hash from '@tadashi/hash' // using frameworks
+// import hash from 'https://unpkg.com/@tadashi/hash@2.2.0/src/browser.js'
+
+const data = await hash('test')
 // => a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
 ```
 
