@@ -1,5 +1,5 @@
 import test from 'ava'
-import hash from '../src/hash.js'
+import hash from '../src/node.js'
 
 test('hash', t => {
 	const data = hash('test')
