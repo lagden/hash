@@ -1,14 +1,21 @@
 import {createHash} from 'node:crypto'
 
-function hash(value, options = {}) {
+/**
+ * Return hash from data
+ * @param {string|Buffer|TypedArray|DataView} data
+ * @param {object} options
+ * @param {string} options.alg       algorithm
+ * @param {string} options.encoding  encoding of the return value
+ * @returns {string|Buffer} Return a buffer or string encoded
+ */
+function hash(data, options = {}) {
 	const {
 		alg = 'sha256',
-		asBuffer = false,
-		encoding = 'hex',
+		encoding,
 	} = options
 	const hash = createHash(alg)
-	hash.update(value)
-	return hash.digest(asBuffer ? undefined : encoding)
+	hash.update(data)
+	return hash.digest(encoding)
 }
 
 export default hash

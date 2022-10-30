@@ -8,15 +8,15 @@ test('hash', t => {
 
 test('hash options', t => {
 	const data = hash('test', {
-		alg: 'sha256',
+		alg: 'sha512',
 		encoding: 'base64',
 	})
 	t.snapshot(data)
 })
 
-test('hash buffer', t => {
+test('hash hex', t => {
 	const data = hash('test', {
-		asBuffer: true,
+		encoding: 'hex',
 	})
 	t.snapshot(data)
 })
