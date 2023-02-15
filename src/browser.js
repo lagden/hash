@@ -4,7 +4,7 @@
  * @param {object}  options
  * @param {string}  options.alg      algorithm
  * @param {boolean} options.asBuffer return hash as buffer
- * @returns {Promise<string|Buffer>} Promise object represents the data string encoded to hex or buffer
+ * @returns {Promise} Promise object represents the data string encoded to hex or buffer
  */
 async function hash(data, options = {}) {
 	const {

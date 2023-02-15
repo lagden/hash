@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto'
  * @param {object} options
  * @param {string} options.alg       algorithm
  * @param {string} options.encoding  encoding of the return value
- * @returns {string|Buffer} Return a buffer or string encoded
+ * @returns {(string|Buffer)} Return a buffer or string encoded
  */
 function hash(data, options = {}) {
 	const {
